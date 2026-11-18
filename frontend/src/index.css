@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.5rem;
+  --bg-primary: #08090A;
+  --bg-surface: #0F1012;
+  --bg-elevated: #181A1F;
+  --bg-card: #121417;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --accent-amber: #F59E0B;
+  --accent-indigo: #6366F1;
+  --bullish: #10B981;
+  --bearish: #EF4444;
+}
+
+.light {
+  --bg-primary: #F8F9FA;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #F1F3F5;
+  --bg-card: #FFFFFF;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.2);
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #9CA3AF;
+  --accent-amber: #D97706;
+  --accent-indigo: #4F46E5;
+  --bullish: #059669;
+  --bearish: #DC2626;
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior-y: contain;
+  }
+  input, textarea, select {
+    font-size: 16px; /* stop iOS auto-zoom */
+  }
+}
+
+.font-display { font-family: 'Outfit', sans-serif; letter-spacing: -0.02em; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+.app-safe-top { padding-top: calc(env(safe-area-inset-top) + 0px); }
+.app-safe-bottom { padding-bottom: calc(env(safe-area-inset-bottom) + 72px); }
+
+.scroll-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scroll-hide::-webkit-scrollbar { display: none; }
+
+.glass {
+  background: color-mix(in srgb, var(--bg-surface) 82%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.glass-bottom {
+  background: color-mix(in srgb, var(--bg-surface) 88%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.card:hover { border-color: var(--border-hover); }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.impact-high { color: var(--bearish); border-color: color-mix(in srgb, var(--bearish) 40%, transparent); background: color-mix(in srgb, var(--bearish) 10%, transparent); }
+.impact-med  { color: var(--accent-amber); border-color: color-mix(in srgb, var(--accent-amber) 40%, transparent); background: color-mix(in srgb, var(--accent-amber) 10%, transparent); }
+.impact-low  { color: #22D3EE; border-color: rgba(34, 211, 238, 0.4); background: rgba(34, 211, 238, 0.08); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 12px; border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 13px; font-weight: 500;
+  transition: all .15s ease;
+}
+.btn-ghost:hover { border-color: var(--border-hover); background: var(--bg-elevated); }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 14px; border-radius: 10px;
+  background: var(--accent-amber);
+  color: #0A0A0A;
+  font-weight: 600; font-size: 14px;
+  border: none;
+  transition: all .15s ease;
+}
+.btn-primary:hover { filter: brightness(1.08); }
+
+.price-up { color: var(--bullish); }
+.price-down { color: var(--bearish); }
+
+.pulse-dot {
+  width: 6px; height: 6px; border-radius: 999px;
+  background: var(--bullish);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--bullish) 60%, transparent);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--bullish) 60%, transparent); }
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+.offline-banner {
+  position: fixed; top: 0; left: 0; right: 0;
+  padding: 6px 12px;
+  background: var(--bearish);
+  color: white;
+  font-size: 12px; text-align: center;
+  z-index: 100;
+}

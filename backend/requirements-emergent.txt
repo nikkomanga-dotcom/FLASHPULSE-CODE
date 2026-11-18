@@ -1,0 +1,5 @@
+# Only needed if you use EMERGENT_LLM_KEY (Emergent platform).
+# emergentintegrations is served from Emergent's own package index:
+#   see Emergent docs for the extra package index URL required by emergentintegrations
+emergentintegrations==0.2.2
+litellm @ https://customer-assets.emergentagent.com/internal-asset/library/litellm-1.80.0-py3-none-any.whl#sha256=adf398c513273de9341f61822296c6b2145f7f2dc4a69daf3ac04829f5bde3f8

@@ -1,0 +1,9 @@
+const KEY = "flashpulse-device-id-v1";
+export const deviceId = () => {
+  let id = localStorage.getItem(KEY);
+  if (!id) {
+    id = `dev-${Math.random().toString(36).slice(2, 10)}-${Date.now()}`;
+    localStorage.setItem(KEY, id);
+  }
+  return id;
+};
