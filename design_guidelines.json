@@ -1,0 +1,199 @@
+{
+  "project_name": "FlashPulse Financial & Geopolitical Intelligence",
+  "app_type": "mobile_web_app (PWA, phone-first, financial/news dashboard)",
+  "aesthetic_archetype": "Bloomberg Terminal x Linear Precision x Artifact AI",
+  "theme_strategy": {
+    "default_mode": "dark",
+    "theme_toggle": true,
+    "system_sync": true,
+    "dark_tokens": {
+      "bg_primary": "#08090A",
+      "bg_surface": "#0F1012",
+      "bg_elevated": "#181A1F",
+      "bg_card": "#121417",
+      "border": "rgba(255, 255, 255, 0.08)",
+      "border_hover": "rgba(255, 255, 255, 0.18)",
+      "text_primary": "#F3F4F6",
+      "text_secondary": "#9CA3AF",
+      "text_muted": "#6B7280",
+      "accent_amber": "#F59E0B",
+      "accent_indigo": "#6366F1",
+      "bullish_green": "#10B981",
+      "bearish_red": "#EF4444"
+    },
+    "light_tokens": {
+      "bg_primary": "#F8F9FA",
+      "bg_surface": "#FFFFFF",
+      "bg_elevated": "#F1F3F5",
+      "bg_card": "#FFFFFF",
+      "border": "rgba(0, 0, 0, 0.08)",
+      "border_hover": "rgba(0, 0, 0, 0.2)",
+      "text_primary": "#111827",
+      "text_secondary": "#4B5563",
+      "text_muted": "#9CA3AF",
+      "accent_amber": "#D97706",
+      "accent_indigo": "#4F46E5",
+      "bullish_green": "#059669",
+      "bearish_red": "#DC2626"
+    }
+  },
+  "typography": {
+    "headings": "Outfit, system-ui, sans-serif (Tight tracking, crisp structural weight)",
+    "data_and_monospaced": "JetBrains Mono, Menlo, monospace (Used for tickers, delta %, impact scores, market prices)",
+    "body": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+    "hierarchy_rules": {
+      "h1_hero": "text-2xl font-bold tracking-tight md:text-3xl",
+      "h2_section": "text-lg font-semibold tracking-tight md:text-xl",
+      "h3_card_title": "text-base font-semibold text-foreground leading-snug",
+      "bullet_points": "text-xs md:text-sm text-muted-foreground leading-relaxed",
+      "tickers": "font-mono text-xs font-semibold tracking-wide",
+      "badge": "font-mono text-[10px] uppercase font-bold tracking-wider"
+    }
+  },
+  "structure_and_levels": {
+    "universal_top_bar": {
+      "features": [
+        "Universal Search Bar with live filter pills (All, Macro, Tech, Energy, Crypto, Geopolitics)",
+        "Real-time API Multi-source Feed Status Badge (Finnhub, NewsAPI, Alpha Vantage)",
+        "Theme Switcher (Dark / Light / Auto System)",
+        "Refresh / Pull-to-refresh trigger with live timestamp indicator"
+      ]
+    },
+    "level_1_flash_feed": {
+      "card_components": [
+        "News Title (Bold, concise, max 2 lines)",
+        "3 Key Bullet Points (High-signal summary, zero friction)",
+        "Impact Score Badge (1-10 with color gradient: 8-10 Red Critical, 5-7 Amber Moderate, 1-4 Cyan Low)",
+        "Sector & Topic Tags (#Semiconductors, #Fed, #OPEC, #Geopolitics)",
+        "Effetto Domino (Domino Effect cascade interactive drawer preview)",
+        "Source credibility indicator + Timestamp + 'Deep Dive (Level 2)' button",
+        "Quick Action: 'Ask AI Copilot about this news'"
+      ]
+    },
+    "level_2_modal_sheet": {
+      "features": [
+        "Full contextual deep dive breakdown",
+        "Interactive chart snippet for affected assets",
+        "Historical Parallel section: 'La Storia Insegna' (Lessons from History)",
+        "Bull vs. Bear Scenarios table",
+        "Direct AI Copilot prompt box ('What does this mean for S&P 500?')"
+      ]
+    },
+    "bottom_nav_4_tabs": {
+      "tab_1_home_briefing": {
+        "id": "tab-home",
+        "label": "Briefing",
+        "widgets": [
+          "Market Index Carousel/Grid: S&P 500, NASDAQ, FTSE MIB, Gold, Oil (WTI), Bitcoin (Real-time delta % sparklines)",
+          "Daily Pillola Storica ('Accadde oggi' historical financial highlight)",
+          "Flash News Feed with filtering & search",
+          "Quick Macro Sentiment Meter (Fear & Greed Index / Market Volatility)"
+        ]
+      },
+      "tab_2_markets_forecasts": {
+        "id": "tab-markets",
+        "label": "Mercati & Previsioni",
+        "widgets": [
+          "Interactive Asset Price Charts (1D, 1W, 1M, 1Y, ALL) using Recharts",
+          "Big Tech Balance Sheets & Earnings Tracker (Apple, Nvidia, Microsoft, Tesla, ASML)",
+          "Bullish vs. Bearish Scenario Analysis Matrix with probability scores",
+          "Macroeconomic Indicators (Interest Rates, Inflation CPI, Unemployment, Yield Curve)"
+        ]
+      },
+      "tab_3_geopolitical_radar": {
+        "id": "tab-radar",
+        "label": "Radar Geopolitico",
+        "widgets": [
+          "Interactive World Map / Regional Conflict & Trade Hotspots List",
+          "Hotspot Detail Cards (Taiwan Strait, Red Sea Shipping, Middle East Energy, Supply Chains)",
+          "La Storia Insegna (Historical Parallel database comparing current events to 1973, 1998, 2008, 2020)",
+          "Supply Chain & Commodities Impact Breakdown"
+        ]
+      },
+      "tab_4_ai_copilot": {
+        "id": "tab-copilot",
+        "label": "AI Copilot",
+        "widgets": [
+          "Gemini-powered Macro Intelligence Chatbot",
+          "Pre-built Smart Prompts ('Spiegami l'impatto dei tassi sui mutui', 'Quali settori soffrono con il petrolio a $90?', 'Analisi portafoglio difensivo')",
+          "Contextual Memory & Live News Synthesizer",
+          "Exportable AI Briefing Summary"
+        ]
+      }
+    }
+  },
+  "micro_interactions": {
+    "framer_motion_usage": [
+      "Smooth tab transitions in Bottom Navigation",
+      "Expandable 'Effetto Domino' chain on flash news cards",
+      "Slide-up sheet for Level 2 news deep dives (Vaul / Radix Dialog)",
+      "Ticker tape pulse animations on price changes",
+      "Pull-to-refresh pull indicator gesture animation"
+    ],
+    "sound_and_haptics": "Subtle visual feedback animations on tap",
+    "toast_notifications": "Sonner toast alerts for market breaking alerts"
+  },
+  "media_assets": {
+    "image_urls": [
+      {
+        "category": "market_charts",
+        "url": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBtYXJrZXQlMjBzdG9jayUyMHRyYWRpbmclMjBnb2xkJTIwYml0Y29pbiUyMG5ld3N8ZW58MHx8fGJsYWNrfDE3OTQ3NDYwMzh8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Stock market candlestick chart on dark screen"
+      },
+      {
+        "category": "financial_data",
+        "url": "https://images.unsplash.com/photo-1649003515353-c58a239cf662?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwzfHxmaW5hbmNpYWwlMjBtYXJrZXQlMjBzdG9jayUyMHRyYWRpbmclMjBnb2xkJTIwYml0Y29pbiUyMG5ld3N8ZW58MHx8fGJsYWNrfDE3OTQ3NDYwMzh8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Financial candlestick chart with index data"
+      },
+      {
+        "category": "crypto_bitcoin",
+        "url": "https://images.pexels.com/photos/29822158/pexels-photo-29822158.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Golden Bitcoin coins on market chart background"
+      },
+      {
+        "category": "geopolitics_globe",
+        "url": "https://images.pexels.com/photos/33400703/pexels-photo-33400703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Monochrome world globe focusing on global macro regions"
+      }
+    ]
+  },
+  "testing_and_data_attributes": {
+    "mandatory_rule": "ALL interactive and key informational elements MUST include a clear data-testid attribute in kebab-case.",
+    "required_test_ids": [
+      "data-testid=\"app-header\"",
+      "data-testid=\"universal-search-input\"",
+      "data-testid=\"theme-toggle-button\"",
+      "data-testid=\"refresh-feed-button\"",
+      "data-testid=\"bottom-nav\"",
+      "data-testid=\"nav-tab-home\"",
+      "data-testid=\"nav-tab-markets\"",
+      "data-testid=\"nav-tab-radar\"",
+      "data-testid=\"nav-tab-copilot\"",
+      "data-testid=\"market-widget-sp500\"",
+      "data-testid=\"market-widget-nasdaq\"",
+      "data-testid=\"market-widget-ftsemib\"",
+      "data-testid=\"market-widget-gold\"",
+      "data-testid=\"market-widget-oil\"",
+      "data-testid=\"market-widget-btc\"",
+      "data-testid=\"flash-card-{id}\"",
+      "data-testid=\"impact-score-badge\"",
+      "data-testid=\"effetto-domino-toggle\"",
+      "data-testid=\"news-level2-trigger\"",
+      "data-testid=\"ask-ai-trigger\"",
+      "data-testid=\"level2-modal\"",
+      "data-testid=\"history-pill-accadde-oggi\"",
+      "data-testid=\"la-storia-insegna-card\"",
+      "data-testid=\"copilot-chat-input\"",
+      "data-testid=\"copilot-send-button\"",
+      "data-testid=\"copilot-message-item\""
+    ]
+  },
+  "instructions_to_main_agent": [
+    "1. Build a sleek mobile-first PWA container with a high-end dark/light theme engine (using next-themes or explicit class toggle).",
+    "2. Ensure zero text collision by using tight hairline borders ('border border-white/10 dark:border-white/10 border-slate-200 light:border-slate-200') and adequate padding ('p-4 md:p-6').",
+    "3. Implement mock multi-source news aggregator state (Finnhub, NewsAPI, Alpha Vantage badges) with filtering by topic, search query, and impact score.",
+    "4. Deliver all key features from user prompt: Level 1 (Flash cards with title + 3 bullets), Impact Score 1-10, Effetto Domino interactive drawer, Sector Tags, Level 2 Modal deep dive with 'Chiedi all'IA', Bottom Nav with 4 tabs, Market Widgets (S&P500, NASDAQ, FTSE MIB, Gold, Oil, BTC), Big Tech financial balance sheet previews, Geopolitical Radar map/list, 'La Storia Insegna' parallel cards, AI Copilot with Gemini chat, and 'Accadde oggi' daily history pill.",
+    "5. Use exact data-testid attributes listed in the guidelines for seamless E2E verifiability.",
+    "6. Ensure code structure uses React .js files and standard imports."
+  ]
+}
